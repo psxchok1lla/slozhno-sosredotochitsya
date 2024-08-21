@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat-css');
-const plumber = require('gulp-plumber');
-const del = require('del');
-const browserSync = require('browser-sync').create();
+const gulp = import('gulp');
+const concat = import('gulp-concat-css');
+const plumber = import('gulp-plumber');
+const del = import('del');
+const browserSync = import('browser-sync').create();
 
 function serve() {
   browserSync.init ({
