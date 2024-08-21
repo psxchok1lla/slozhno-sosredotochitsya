@@ -45,10 +45,11 @@ function clean() {
 
 function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
-  gulp.watch(['src/blocks/**/*.css'], css);
+  gulp.watch(['src/css/**/*.css'], css);
+  gulp.watch(['src/fonts/**/*.{woff,woff2,ttf,eot}'], fonts)
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
-}
 
+}
 
 const build = gulp.series(clean, gulp.parallel(html, css, images));
 const watchapp = gulp.parallel(build, watchFiles, serve);
