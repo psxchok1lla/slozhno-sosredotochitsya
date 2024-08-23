@@ -1,7 +1,7 @@
 {
   "name": "slozhno-sosredotochitsya",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "stylelint.config.js",
   "scripts": {
     "test": "echo 'Привет!'",
     "check": "prettier --check './src/**/*.{html,css,js}'",
@@ -18,13 +18,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "del": "^7.1.0",
+    "browser-sync": "^3.0.2",
+    "del": "^6.0.0",
     "gulp": "^5.0.0",
     "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
     "prettier": "^3.3.3",
     "stylelint": "^16.8.2"
-  },
-  "dependencies": {
-    "gulp-plumber": "^1.2.1"
   }
 }
