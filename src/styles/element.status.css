@@ -1,0 +1,50 @@
+/* default status start */
+
+
+a {
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+/* default status end */
+
+
+/* hover status for desktop start */
+
+@media (hover: hover) {
+
+  a:hover {
+
+    text-decoration: underline;
+  }
+}
+
+button:hover {
+  border: 1px  solid rgba( 255 0 112 / 0.4);
+}
+
+/* hover status for desktop end */
+
+
+/* hover status for mobile start */
+@media (hover: none) {
+
+  a:active {
+
+    border-bottom: 1px solid var(--color-primary-text);
+  }
+}
+
+/* hover status for mobile end */
+
+
+/* focus status start */
+
+button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+a:focus-visible {
+  border: 1px 
+}
+
+/* focus status end */

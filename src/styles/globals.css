@@ -1,9 +1,11 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -39,4 +41,18 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  appearance: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3, h4, h5 {
+  font-size: 1.125rem;
+  line-height: 1.4625rem;
 }

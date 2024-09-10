@@ -1,12 +1,130 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+:root.theme-light {
+  --accent-color: #ff8dcb;
+  --color-background: #fff1f7;
+  --color-primary-text: #353430;
+  --color-highlight-text: #353430;
+  --title-logo-color: #ffc2e6;
+  --dark-accent-color: #ff0070;
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-line-height: calc(clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)*8.25%);
+  --font-family: 'IBM Plex mono', monospace;
+  --primary-font-size: 1.125rem;
+  --primary-line-height: 1.4625rem;
+  --primary-font-weight: bold;  
 }
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    
+    --accent-color: #ff8dcb;
+    --color-background: #fff1f7;
+    --color-primary-text: #353430;
+    --color-highlight-text: #353430;
+    --title-logo-color: #ffc2e6;
+    --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    --title-line-height: calc(clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)*8.25%);
+    --font-family: 'IBM Plex mono', monospace;
+    --primary-font-size: 1.125rem;
+    --primary-line-height: 1.4625rem;
+    --primary-font-weight: bold; 
+  }
+}
+
+/*=========================================
+=           header styles start           =
+=========================================*/
+
+.theme_light.header {
+  background-image: url(../images/cover-image-light.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.decorated-block {
+  display: none;
+}
+
+.theme_light.decorated-corner-top {
+  border-color: var(--color-primary-text);
+}
+
+.theme_light.decorated-corner-bottom {
+  border-color: var(--color-primary-text);
+}
+
+.theme_light.header__theme-menu-button  {
+  color: var(--color-primary-text);
+}
+
+/*=========================================
+=           header styles end             =
+=========================================*/
+
+
+
+/*=========================================
+=           main styles start             =
+=========================================*/
+
+.theme-light.card-title {
+  color: var(--color-highlight-text);
+}
+
+/*=========================================
+=           main styles end               =
+=========================================*/
+
+
+
+/*=========================================
+=        element-status styles start      =
+=========================================*/
+
+
+
+/* hover status for desktop start */
+
+@media (hover: hover) {
+
+  a:hover {
+
+    text-decoration: underline;
+  }
+}
+
+button:hover .theme_light{
+  border: 1px  solid rgba( 53 52 48 );
+}
+
+/* hover status for desktop end */
+
+
+/* hover status for mobile start */
+@media (hover: none) {
+
+  .theme_lighta:active {
+
+    border-bottom: 1px solid var(--dark-accent-color);
+  }
+}
+
+/* hover status for mobile end */
+
+
+/* focus status start */
+
+.theme_light button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+a:focus-visible {
+  border: 1px 
+}
+
+/* focus status end */
+
+/*=========================================
+=        element-status styles start      =
+=========================================*/
