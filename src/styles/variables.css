@@ -5,9 +5,14 @@
   --color-highlight-text: #000028;
   --title-logo-color: #db00ff;
   --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --title-line-height: calc(clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)*8.25%);
+  --background-image: url(../images/cover-image-dark.png);
   --font-family: 'IBM Plex mono', monospace;
   --primary-font-size: 1.125rem;
   --primary-line-height: 1.4625rem;
   --primary-font-weight: bold;
+  --decor-element: #ff0070;
+  --button-color: #ff0070;
+  --button-color-hover: rgba(255 0 112 / 0.4);
+  --overlay: rgba(0 0 0 / 0.25);
+  --decor-block-display: flex;
 }
