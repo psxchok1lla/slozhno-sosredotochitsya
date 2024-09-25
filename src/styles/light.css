@@ -1,6 +1,7 @@
 .page.theme-light {
   --accent-color: #ff8dcb;
   --color-background: #fff1f7;
+  --color-link: #353430;
   --color-primary-text: #353430;
   --color-highlight-text: #353430;
   --title-logo-color: #ffc2e6;
@@ -23,6 +24,7 @@
   :root {
     --accent-color: #ff8dcb;
     --color-background: #fff1f7;
+    --color-link: #353430;
     --color-primary-text: #353430;
     --color-highlight-text: #353430;
     --title-logo-color: #ffc2e6;

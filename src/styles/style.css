@@ -95,6 +95,7 @@
   margin-top: 4rem;
   margin-bottom: 4.0625rem;
   line-height: 1.625rem;
+  color: var(--color-link);
 }
 
 .header__theme-menu-list {
@@ -110,7 +111,7 @@
   line-height: 1.625rem;
   width: 4.375rem;
   box-sizing: border-box;
-  color: var(--accent-color);
+  color: var(--color-link);
   cursor: pointer;
 }
 
@@ -181,7 +182,7 @@
 
 .card-title {
   margin-bottom: 1.25rem;
-  color: var(--accent-color);
+  color: var(--color-link);
 }
 
 .card-content {
@@ -356,7 +357,6 @@ img {
   .title {
     font-size: 9.8125rem;
     line-height: 8rem;
-
   }
 
   .header-description {
