@@ -35,7 +35,7 @@ button:hover {
 
 button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-color-hover);
 }
 
 a:focus-visible {

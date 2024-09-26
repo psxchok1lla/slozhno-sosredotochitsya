@@ -1,32 +1,18 @@
 .page {
   display: grid;
   position: relative;
-  gap: 2.5rem;
+  gap: 2rem;
   font-family: var(--font-family);
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   font-weight: bold;
   background-image: var(--background-image);
+  background-color: var(--color-background);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
   padding: 0.625rem;
-}
-
-.page:before {
-  content: '';
-  display: block;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--overlay);
-  z-index: 0;
 }
 
 /*=========================================
@@ -37,7 +23,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  z-index: 1;
+  min-height: 41.75rem;
   position: relative;
 }
 
@@ -46,13 +32,11 @@
   line-height: 1.4625rem;
   text-transform: uppercase;
   font-weight: lighter;
-  margin-bottom: 2.4375rem;
-  margin-right: 0.25rem;
+  right: 1.75rem;
   position: absolute;
   align-self: flex-end;
   color: var(--decor-element);
   display: var(--decor-block-display);
-  padding-right: 1.5rem;
 }
 
 .decorated-element::after {
@@ -63,7 +47,8 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   position: absolute;
-  margin: 0.5rem 2.625rem 0;
+  top: 0.5rem;
+  left: 2.625rem;
 }
 
 .decorated-zone::before {
@@ -135,7 +120,8 @@
   margin-top: 3.4375rem;
   margin-bottom: 3.5rem;
   text-align: left;
-  width: 22.1875rem;
+  max-width: 22.1875rem;
+  width: 100%;
   display: flex;
   align-self: flex-end;
   color: var(--color-highlight-text);
@@ -155,7 +141,6 @@
   gap: 3.125rem;
   font-size: 1.125rem;
   line-height: 1.4625rem;
-  z-index: 1;
 }
 
 .answer-topic {
@@ -186,7 +171,8 @@
 }
 
 .card-content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.625rem;
 }
 
@@ -216,16 +202,17 @@ img {
 =========================================*/
 
 .footer {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   position: relative;
   height: 100vh;
-  z-index: 1;
+  min-height: 41.75rem;
   justify-content: space-between;
 }
 
 .footer .title {
-  top: 40vh;
+  top: 42vh;
   align-self: center;
   justify-self: center;
 }
@@ -240,10 +227,11 @@ img {
 
 /* tablet media queries start */
 
-/* @media (min-width: 23.4375rem) and (max-width: 64rem){
+/* @media (min-width: 23.4375rem) {
   
   .header {
     display: flex;
+    gap: 0;
     justify-content: space-between;
   }
 } */
@@ -252,7 +240,7 @@ img {
 
   .page {
     padding: 1.25rem;
-    gap: 3.75rem;
+    gap: 2.5rem;
   }
 
   .header__theme-menu {
@@ -269,7 +257,8 @@ img {
   }
 
   .header-description {
-    width: 22.75rem;
+    max-width: 22.75rem;
+    width: 100%;
     margin-top: 10.125rem;
   }
 
@@ -283,7 +272,8 @@ img {
   }
 
   .card-what .card-title {
-    width: 14.75rem;
+    max-width: 14.75rem;
+    width: 100%;
   }
 
   .card-why,
@@ -335,6 +325,15 @@ img {
     height: 100%;
     object-fit: cover;
   }
+
+  .footer {
+    margin-top: 2.5rem;
+  }
+
+  .footer .title {
+    top: 43.5vh;
+    left: 0.5vh;
+  }
 }
 
 /* tablet media queries end */
@@ -361,7 +360,12 @@ img {
 
   .header-description {
     margin-top: 7.125rem;
-    width: 30.6875rem;
+    max-width: 30.6875rem;
+    width: 100%;
+  }
+
+  .picture-content {
+    gap: 1rem;
   }
 
   .card-why,
@@ -369,18 +373,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 2.06fr;
     gap: 1.25rem;
-  }
-
-  .card-why .card-title {
-    min-width: 19.6875rem;
-  }
-
-  .card-how .card-title {
-    min-width: 19.6875rem;
-  }
-
-  .card-what .card-title {
-    width: 19.6875rem;
   }
 
   .card-what .card {
