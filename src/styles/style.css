@@ -20,8 +20,11 @@
 =========================================*/
 
 .header {
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 41.75rem;
   position: relative;
@@ -34,7 +37,8 @@
   font-weight: lighter;
   right: 1.75rem;
   position: absolute;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  justify-self: end;
   color: var(--decor-element);
   display: var(--decor-block-display);
 }
@@ -56,10 +60,12 @@
   width: 1.5625rem;
   height: 1.5625rem;
   display: flex;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   position: absolute;
   border-top: 1px solid var(--decor-element);
   border-right: 1px solid var(--decor-element);
+  justify-self: end;
+  align-self: self-start;
 }
 
 .decorated-zone::after {
@@ -77,8 +83,9 @@
   box-sizing: border-box;
   display: flex;
   justify-content: end;
-  margin-top: 4rem;
-  margin-bottom: 4.0625rem;
+  /* margin-top: 4rem;
+  margin-bottom: 4.0625rem; */
+  align-self: center;
   line-height: 1.625rem;
   color: var(--color-link);
 }
@@ -117,13 +124,14 @@
 
 .header-description {
   position: relative;
-  margin-top: 3.4375rem;
-  margin-bottom: 3.5rem;
+  /* margin-top: 3.4375rem;
+  margin-bottom: 3.5rem; */
   text-align: left;
   max-width: 22.1875rem;
   width: 100%;
-  display: flex;
-  align-self: flex-end;
+  /* display: flex; */
+  justify-self: self-end;
+  align-self: center;
   color: var(--color-highlight-text);
   background-color: var(--accent-color);
 }
@@ -227,15 +235,6 @@ img {
 
 /* tablet media queries start */
 
-/* @media (min-width: 23.4375rem) {
-  
-  .header {
-    display: flex;
-    gap: 0;
-    justify-content: space-between;
-  }
-} */
-
 @media (min-width: 48rem) {
 
   .page {
@@ -243,27 +242,27 @@ img {
     gap: 2.5rem;
   }
 
-  .header__theme-menu {
+  /* .header__theme-menu {
     margin-top: 10.5rem;
     margin-bottom: 11rem;
-  }
+  } */
 
   .title {
     right: 1rem;
   }
 
-  .content {
-    gap: 5rem;
-  }
-
   .header-description {
     max-width: 22.75rem;
     width: 100%;
-    margin-top: 10.125rem;
+    /* margin-top: 10.125rem; */
   }
-
+  
   .decorated-zone::after {
     bottom: 2.5rem;
+  }
+  
+  .content {
+    gap: 5rem;
   }
 
   .card-list {
@@ -344,7 +343,7 @@ img {
 
   .header__theme-menu {
     margin-top: 0;
-    margin-bottom: 17.06375rem;
+    /* margin-bottom: 17.06375rem; */
     align-self: center;
   }
 
@@ -359,7 +358,7 @@ img {
   }
 
   .header-description {
-    margin-top: 7.125rem;
+    /* margin-top: 7.125rem; */
     max-width: 30.6875rem;
     width: 100%;
   }

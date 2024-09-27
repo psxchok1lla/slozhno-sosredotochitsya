@@ -11,7 +11,7 @@ a {
 @media (hover: hover) {
 
   a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid var(--color-primary-text);
   }
 }
 
@@ -25,6 +25,7 @@ button:hover {
 @media (hover: none) {
 
   a:active {
+    text-decoration: none;
     border-bottom: 1px solid var(--color-primary-text);
   }
 }
@@ -35,12 +36,12 @@ button:hover {
 
 button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--button-color-hover);
+  border-bottom: 1px solid var(--button-color-focus);
 }
 
 a:focus-visible {
   outline: none;
-  border: 1px;
+  border: 1px solid var(--button-color-focus);
 }
 
 /* focus status end */

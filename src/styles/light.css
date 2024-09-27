@@ -15,6 +15,7 @@
   --decor-element: #353430;
   --button-color: #353430;
   --button-color-hover: rgba(50 49 45 / 0.4);
+  --button-color-focus: #353430;
   --overlay: none;
   --decor-block-display: none;
 }
@@ -37,6 +38,7 @@
     --decor-element: #353430;
     --button-color: #353430;
     --button-color-hover: rgba(50 49 45 / 0.4);
+    --button-color-focus: #353430;
     --overlay: 0;
     --decor-block-display: none;
   }
