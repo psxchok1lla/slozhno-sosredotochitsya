@@ -41,7 +41,7 @@ button:focus-visible {
 
 a:focus-visible {
   outline: none;
-  border: 1px solid var(--button-color-focus);
+  border: 1px solid var(--button-color-hover);
 }
 
 /* focus status end */

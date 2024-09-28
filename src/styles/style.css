@@ -20,14 +20,12 @@
 =========================================*/
 
 .header {
-  box-sizing: border-box;
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 41.75rem;
   position: relative;
+  padding-bottom: 1.25rem;
 }
 
 .decorated-element {
@@ -37,7 +35,6 @@
   font-weight: lighter;
   right: 1.75rem;
   position: absolute;
-  /* align-self: flex-end; */
   justify-self: end;
   color: var(--decor-element);
   display: var(--decor-block-display);
@@ -59,13 +56,12 @@
   content: '';
   width: 1.5625rem;
   height: 1.5625rem;
-  display: flex;
-  /* align-self: flex-end; */
   position: absolute;
   border-top: 1px solid var(--decor-element);
   border-right: 1px solid var(--decor-element);
-  justify-self: end;
-  align-self: self-start;
+  justify-self: flex-end;
+  align-self: start;
+  right: 0;
 }
 
 .decorated-zone::after {
@@ -82,12 +78,11 @@
 .header__theme-menu {
   box-sizing: border-box;
   display: flex;
-  justify-content: end;
-  /* margin-top: 4rem;
-  margin-bottom: 4.0625rem; */
   align-self: center;
   line-height: 1.625rem;
   color: var(--color-link);
+  justify-self: end;
+  position: relative;
 }
 
 .header__theme-menu-list {
@@ -119,17 +114,13 @@
   color: var(--title-logo-color);
   text-shadow: 4px 4px var(--accent-color);
   align-self: start;
-  padding: 0;
 }
 
 .header-description {
   position: relative;
-  /* margin-top: 3.4375rem;
-  margin-bottom: 3.5rem; */
   text-align: left;
   max-width: 22.1875rem;
   width: 100%;
-  /* display: flex; */
   justify-self: self-end;
   align-self: center;
   color: var(--color-highlight-text);
@@ -190,6 +181,10 @@
   color: var(--color-primary-text);
 }
 
+.picture-content {
+  gap: 0.5rem;
+}
+
 .picture-list {
   display: grid;
   gap: 0.625rem;
@@ -216,7 +211,12 @@ img {
   position: relative;
   height: 100vh;
   min-height: 41.75rem;
-  justify-content: space-between;
+}
+
+.footer:not(.decorated-zone) {
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .footer .title {
@@ -242,10 +242,9 @@ img {
     gap: 2.5rem;
   }
 
-  /* .header__theme-menu {
-    margin-top: 10.5rem;
-    margin-bottom: 11rem;
-  } */
+  .header {
+    padding-bottom: 2.5rem;
+  }
 
   .title {
     right: 1rem;
@@ -253,8 +252,6 @@ img {
 
   .header-description {
     max-width: 22.75rem;
-    width: 100%;
-    /* margin-top: 10.125rem; */
   }
   
   .decorated-zone::after {
@@ -266,7 +263,6 @@ img {
   }
 
   .card-list {
-    display: grid;
     gap: 5rem;
   }
 
@@ -283,7 +279,6 @@ img {
   }
 
   .picture-list {
-    display: grid;
     gap: 1.25rem;
     justify-content: center;
   }
@@ -291,32 +286,27 @@ img {
   .photo-sunset {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    background-image: url(../images/sunset.png);
   }
 
   .photo-icecream {
     grid-column: 3;
     grid-row: 1 / 3;
-    background-image: url(../images/ice-cream.png);
     background-position: center;
   }
 
   .photo-tape {
     grid-column: 1;
     grid-row: 2 / 4;
-    background-image: url(../images/tape.png);
   }
 
   .photo-books {
     grid-column: 2;
     grid-row: 2;
-    background-image: url(../images/books.png);
   }
 
   .photo-street {
     grid-column: 2 / 4;
     grid-row: 3;
-    background-image: url(../images/street.png);
   }
 
   .photo {
@@ -342,13 +332,11 @@ img {
 @media (min-width: 64rem) {
 
   .header__theme-menu {
-    margin-top: 0;
-    /* margin-bottom: 17.06375rem; */
-    align-self: center;
+    justify-self: center;
+    align-self: start;
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
   }
 
@@ -358,20 +346,16 @@ img {
   }
 
   .header-description {
-    /* margin-top: 7.125rem; */
     max-width: 30.6875rem;
-    width: 100%;
   }
 
-  .picture-content {
-    gap: 1rem;
+  .card-what .card-title {
+    max-width: 19.6875rem;
   }
 
   .card-why,
   .card-how {
-    display: grid;
     grid-template-columns: 1fr 2.06fr;
-    gap: 1.25rem;
   }
 
   .card-what .card {
@@ -380,11 +364,10 @@ img {
     gap: 1.25rem;
   }
 
-  .picture-list {
-    display: grid;
-    gap: 1.25rem;
-    justify-content: center;
+  .footer .title {
+    top: 39vh;
   }
+
 }
 
 /* desktop media queries start */
