@@ -364,6 +364,10 @@ img {
     gap: 1.25rem;
   }
 
+  .picture-content {
+    gap: 1.25rem;
+  } 
+
   .footer .title {
     top: 39vh;
   }
